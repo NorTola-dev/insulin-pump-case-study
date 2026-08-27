@@ -53,6 +53,8 @@ insulin-pump-case-study/
 │   ├── sequence-diagram.png
 │   └── state-machine.png
 
+```
+
 🚀 3. Git Essentials Guide (Clone, Pull & Push)
 All team members must follow these standard steps to set up and contribute to the repository.
 📥 3.1 How to Clone the Repository
