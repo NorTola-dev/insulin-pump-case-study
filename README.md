@@ -61,7 +61,7 @@ All team members must follow these standard steps to set up and contribute to th
 Run this command on your machine only once when joining the project:
 
 # 1. Clone the project repository
-git clone https://github.com/NorTola-dev/insulin-pump-case-study.git
+git clone https://github.com/insulin-pump-case-study/Insulin-Pump---Case-Study.git
 
 # 2. Enter the project directory
 cd insulin-pump-case-study
