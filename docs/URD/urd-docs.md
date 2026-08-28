@@ -447,3 +447,8 @@ For an academic submission, the strongest approach is:
 * Do not claim that every NFR in this README is a direct quotation from the original text.
 
 The original case study also has a separate **Insulin Pump Requirements Specification**, which is important because the case-study page notes that the requirements specification references the formal specification and is not intended to stand alone.
+
+
+3
+2
+4
