@@ -84,18 +84,12 @@ Functional requirements describe **what the system must do**.
 **English:**
 The system shall collect information from the blood sensor.
 
-**Khmer:**
-ប្រព័ន្ធត្រូវទទួលព័ត៌មានពីឧបករណ៍ Blood Sensor។
-
 ---
 
 ### FR-02 — Analyze Sensor Reading
 
 **English:**
 The system shall analyze the information received from the blood sensor.
-
-**Khmer:**
-ប្រព័ន្ធត្រូវវិភាគព័ត៌មានដែលទទួលបានពី Blood Sensor។
 
 ---
 
@@ -104,18 +98,12 @@ The system shall analyze the information received from the blood sensor.
 **English:**
 The controller shall calculate the patient's blood sugar level from the sensor information.
 
-**Khmer:**
-Controller ត្រូវគណនាកម្រិតជាតិស្ករក្នុងឈាមរបស់អ្នកជំងឺពីព័ត៌មានរបស់ Sensor។
-
 ---
 
 ### FR-04 — Calculate Insulin Requirement
 
 **English:**
 The system shall calculate the amount of insulin required based on the blood sugar information.
-
-**Khmer:**
-ប្រព័ន្ធត្រូវគណនាបរិមាណអាំងស៊ុយលីនដែលត្រូវការ ដោយផ្អែកលើព័ត៌មានកម្រិតជាតិស្ករក្នុងឈាម។
 
 ---
 
@@ -124,18 +112,12 @@ The system shall calculate the amount of insulin required based on the blood sug
 **English:**
 The controller shall generate commands for controlling the insulin pump.
 
-**Khmer:**
-Controller ត្រូវបង្កើតពាក្យបញ្ជាសម្រាប់គ្រប់គ្រង Insulin Pump។
-
 ---
 
 ### FR-06 — Control Insulin Pump
 
 **English:**
 The controller shall send signals to the insulin pump.
-
-**Khmer:**
-Controller ត្រូវបញ្ជូនសញ្ញាទៅ Insulin Pump។
 
 ---
 
@@ -144,18 +126,12 @@ Controller ត្រូវបញ្ជូនសញ្ញាទៅ Insulin Pump�
 **English:**
 The insulin pump shall deliver the required amount of insulin.
 
-**Khmer:**
-Insulin Pump ត្រូវបញ្ចេញអាំងស៊ុយលីនតាមបរិមាណដែលត្រូវការ។
-
 ---
 
 ### FR-08 — Pulse-Based Delivery
 
 **English:**
 The pump shall deliver one unit of insulin for each pulse received from the controller.
-
-**Khmer:**
-Pump ត្រូវបញ្ចេញអាំងស៊ុយលីនមួយ Unit សម្រាប់ Pulse មួយដែលទទួលបានពី Controller។
 
 For example:
 
@@ -173,9 +149,6 @@ This one-pulse/one-unit relationship is explicitly described in the case study.
 **English:**
 The system shall continue monitoring the patient's blood sugar level.
 
-**Khmer:**
-ប្រព័ន្ធត្រូវបន្តតាមដានកម្រិតជាតិស្ករក្នុងឈាមរបស់អ្នកជំងឺ។
-
 ---
 
 # 6. Non-Functional Requirements
@@ -187,18 +160,12 @@ Non-functional requirements describe **how the system should operate**.
 **English:**
 The system shall operate safely and minimize the risk of delivering an incorrect insulin dose.
 
-**Khmer:**
-ប្រព័ន្ធត្រូវដំណើរការដោយសុវត្ថិភាព និងកាត់បន្ថយហានិភ័យនៃការបញ្ចេញអាំងស៊ុយលីនខុសបរិមាណ។
-
 ---
 
 ## NFR-02 — Reliability
 
 **English:**
 The system shall reliably deliver the correct amount of insulin required for the patient's current blood sugar level.
-
-**Khmer:**
-ប្រព័ន្ធត្រូវមានភាពជឿទុកចិត្តបាន និងត្រូវបញ្ចេញអាំងស៊ុយលីនក្នុងបរិមាណត្រឹមត្រូវសម្រាប់កម្រិតជាតិស្ករបច្ចុប្បន្ន។
 
 ---
 
@@ -207,18 +174,12 @@ The system shall reliably deliver the correct amount of insulin required for the
 **English:**
 The system shall be available to deliver insulin when required.
 
-**Khmer:**
-ប្រព័ន្ធត្រូវអាចប្រើប្រាស់បាននៅពេលដែលត្រូវការបញ្ចេញអាំងស៊ុយលីន។
-
 ---
 
 ## NFR-04 — Accuracy
 
 **English:**
 The system shall accurately calculate the required insulin dose.
-
-**Khmer:**
-ប្រព័ន្ធត្រូវគណនាបរិមាណអាំងស៊ុយលីនដែលត្រូវការបានត្រឹមត្រូវ។
 
 ---
 
@@ -227,18 +188,12 @@ The system shall accurately calculate the required insulin dose.
 **English:**
 The system should process sensor information and control the pump within an appropriate time.
 
-**Khmer:**
-ប្រព័ន្ធគួរដំណើរការព័ត៌មានពី Sensor និងគ្រប់គ្រង Pump ក្នុងរយៈពេលសមស្រប។
-
 ---
 
 ## NFR-06 — Fault Handling
 
 **English:**
 The system shall detect relevant error conditions and notify the user using an alarm.
-
-**Khmer:**
-ប្រព័ន្ធត្រូវរកឃើញស្ថានភាព Error ដែលពាក់ព័ន្ធ និងជូនដំណឹងដល់អ្នកប្រើប្រាស់តាមរយៈ Alarm។
 
 The published case-study requirements identify alarms for error conditions as part of the system constraints.
 
