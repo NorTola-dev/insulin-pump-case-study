@@ -1,121 +1,93 @@
-# Waterfall Model – Insulin Pump Case Study
+# Waterfall Model - Insulin Pump Case Study
 
 ## 1. Overview
 
-The Waterfall Model is a plan-driven software process model.
-It develops software through a sequence of clearly defined stages.
+**Waterfall Model** គឺជា Software Process Model ដែលអភិវឌ្ឍ System តាមលំដាប់ជំហានច្បាស់ៗ។
+រាល់ Phase ត្រូវបញ្ចប់មុននឹងទៅ Phase បន្ទាប់។
 
-The main stages are:
-
-1. Requirements Analysis and Definition
-2. System and Software Design
+Main phases:
+1. Requirements
+2. Design
 3. Implementation and Unit Testing
 4. Integration and System Testing
 5. Operation and Maintenance
 
-Each stage produces documents or results that are used in the next stage.
-This makes the process easy to plan, follow, and review.
+Waterfall មាន Structure ច្បាស់ ងាយស្រួល Plan, Manage និង Review។ សម្រាប់ **Insulin Pump** ដែលជា safety-critical system វាជួយឱ្យ Team ធ្វើការ និងរក្សា Documentation បានច្បាស់។
 
-For a safety-critical system such as an insulin pump, a structured process can
-help the development team manage requirements, design, testing, and documentation.
-## 2. Why Waterfall Can Be Used for an Insulin Pump
+---
 
-An insulin pump is a software-controlled medical device.
-It is a safety-critical system because a software failure may affect a patient's health.
+## 2. Why Use Waterfall for Insulin Pump?
 
-The development process therefore needs:
+Insulin Pump ជា Medical Device ដែលមាន Software គ្រប់គ្រងការផ្តល់ Insulin។ បើ Software មាន Error អាចប៉ះពាល់ដល់ Patient Safety។
 
-- Clear and testable requirements
-- Careful system and software design
-- Well-defined development stages
-- Systematic testing and validation
-- Good documentation
-- Controlled maintenance and changes
+ដូច្នេះ System ត្រូវការ:
+- Clear and testable Requirements
+- Careful Design
+- Step-by-step Development
+- Systematic Testing
+- Good Documentation
+- Controlled Changes
 
-The Waterfall Model provides a clear, step-by-step process that can support these needs.
-However, safety-critical development also needs strong verification, validation,
-risk management, and traceability.
+Waterfall ជួយឱ្យការងារមានលំដាប់ច្បាស់។ ប៉ុន្តែ Safety-critical system ក៏ត្រូវមាន **Verification, Validation, Risk Management និង Traceability** ផងដែរ។
 
-## 3. Where and How Waterfall Is Applied
+---
 
-The Waterfall Model can be applied to the insulin pump as follows.
-### 3.1 Requirements Analysis and Definition
+## 3. How Waterfall Is Applied
 
-In this stage, the team defines what the insulin pump must do.
-Requirements should be clear, specific, and testable.
+### 3.1 Requirements
+
+ក្នុង Phase នេះ Team កំណត់ថា Insulin Pump ត្រូវធ្វើអ្វីខ្លះ។ Requirements ត្រូវសរសេរឱ្យ Clear និង Testable។
 
 Examples:
+- System shall read Blood Glucose data from Sensor.
+- System shall calculate Insulin Dose.
+- System shall control Insulin Delivery.
+- System shall detect abnormal conditions.
+- System shall generate an Alarm when a serious problem occurs.
+- System shall prevent an unsafe Dose.
 
-- The system shall collect blood glucose data from the sensor.
-- The system shall calculate the required insulin dose.
-- The system shall control insulin delivery.
-- The system shall detect abnormal sensor or pump conditions.
-- The system shall generate an alarm when a serious problem occurs.
-- The system shall prevent an unsafe insulin dose.
+Requirements ក្នុង Case Study មានដូចជា **SRS-FR-01 to SRS-FR-07, SRS-SR-01, SRS-SR-02 និង SRS-NFR-03**។
 
-Relevant requirements in this case study include SRS-FR-01 to SRS-FR-07,
-SRS-SR-01, SRS-SR-02, and SRS-NFR-03.
+**Deliverables:** URD, SRS, Functional Requirements, Safety Requirements និង Traceability Record។
 
-**Main deliverables:** URD, SRS, functional requirements, safety requirements,
-and a requirements traceability record.
+### 3.2 Design
 
-### 3.2 System and Software Design
-
-In this stage, the requirements are converted into a system and software design.
-The design explains how the main components work together.
-
-Example:
+ក្នុង Phase នេះ Requirements ត្រូវបានបម្លែងទៅជា System និង Software Design។ Design បង្ហាញពី Components, Interfaces និង Data Flow។
 
 ```text
 Sensor / Patient Data
-        ↓
-Sensor Data Validation
-        ↓
+        |
+Sensor Data Check
+        |
 Blood Glucose Calculation
-        ↓
+        |
 Insulin Dose Calculation
-        ↓
+        |
 Safety Check
-        ↓
+        |
 Pump Control
-        ↓
+        |
 Insulin Delivery
 ```
 
-The design should define system components, interfaces, data flow, and safety controls.
+**Deliverables:** System Architecture, Software Design, Interfaces និង Data-flow Diagram។
 
-**Main deliverables:** system architecture, software design, interfaces, and data-flow diagrams.
 ### 3.3 Implementation and Unit Testing
 
-In this stage, developers implement the software based on the approved design.
-Each software component is tested separately before integration.
+Developer សរសេរ Code តាម Design ដែលបាន Approve។ Component នីមួយៗត្រូវ Test ដាច់ដោយឡែក។
 
 Examples:
+- Test Dose Calculation
+- Test Sensor Data Check
+- Test Safety Check
+- Test Alarm Function
+- Test Pump Control
 
-```text
-Dose Calculation
-       ↓
-   Unit Test
-
-Safety Check
-       ↓
-   Unit Test
-
-Alarm System
-       ↓
-   Unit Test
-```
-
-Unit tests can check dose calculations, sensor validation, safety checks,
-alarm functions, and pump-control functions.
-
-**Main deliverables:** source code, unit test cases, and unit test results.
+**Deliverables:** Source Code, Unit Test Cases និង Unit Test Results។
 
 ### 3.4 Integration and System Testing
 
-After the individual components pass unit testing, they are combined and tested together.
-
-Example:
+បន្ទាប់ពី Components នីមួយៗ Test បានល្អ វាត្រូវបាន Combine ហើយ Test ជាមួយគ្នា។
 
 ```text
 Sensor
@@ -125,182 +97,176 @@ Dose Calculation
 Safety Check
    +
 Pump Control
-        ↓
+        |
 Complete Insulin Pump System
-        ↓
+        |
 System Testing
 ```
 
-The complete system is tested to check whether it meets the requirements.
-Testing should also check safety behavior, abnormal conditions, and system performance.
+Testing ត្រូវ Check ថា System ធ្វើតាម Requirements ឬអត់ ហើយត្រូវ Check Safety, Error Conditions និង Performance ផងដែរ។
 
-**Main deliverables:** integration test cases, system test cases, test reports,
-and requirements-to-test traceability.
+**Deliverables:** Integration Test Cases, System Test Cases, Test Report និង Requirements-to-Test Traceability។
+
 ### 3.5 Operation and Maintenance
 
-After the system passes testing and is deployed, it enters the operation phase.
-The system must be monitored and maintained carefully.
+បន្ទាប់ពី System Pass Testing ហើយត្រូវបាន Release វាចូលទៅ Operation និង Maintenance។
 
-Maintenance may include:
+Maintenance អាចមាន:
+- Fix Software Bugs
+- Fix Defects
+- Update System when approved
+- Update Documentation
+- Update Requirements and Tests when needed
 
-- Fixing software problems
-- Correcting defects
-- Improving the system when approved
-- Updating documentation
-- Updating requirements and tests when changes are needed
+សម្រាប់ Medical Device ការផ្លាស់ប្តូរ ត្រូវ Control និង Test មុនពេល Release។
 
-For a safety-critical medical system, changes should be controlled and tested before release.
+**Deliverables:** Maintenance Records, Updated Documents, Change Records និង Regression Test Results។
 
-**Main deliverables:** maintenance records, updated documentation, change records,
-and regression test results.
+---
 
 ## 4. Example: Insulin Dose Safety
 
-One important safety requirement is that the pump should not deliver an unsafe insulin dose.
+ចំណុចសំខាន់មួយគឺ System មិនត្រូវផ្តល់ Insulin Dose ដែលមិនមានសុវត្ថិភាព។
 
-For example:
+Example:
 
 ```text
 Maximum Safe Dose = 10 units
 Calculated Dose   = 15 units
 ```
 
-The system should perform a safety check before delivery:
+System ត្រូវធ្វើ **Safety Check** មុនពេល Delivery:
 
 ```text
 Calculated Dose
-       ↓
+       |
 Safety Check
-       ↓
+       |
 15 > 10
-       ↓
+       |
 Prevent Unsafe Delivery
-       ↓
-Generate Alarm / Safety Response
+       |
+Generate Alarm
 ```
 
-The purpose is to prevent the system from entering an unsafe state.
-This example shows why clear requirements, careful design, implementation,
-and systematic testing are important for an insulin pump.
-## 5. Key Strengths in the Insulin Pump Context
+នេះមានន័យថា System ត្រូវ Stop ការផ្តល់ Dose ដែលលើស Limit និងបង្ហាញ Alarm។ វាជួយ Prevent Unsafe State និងការពារ Patient Safety។
+
+---
+
+## 5. Key Strengths
 
 ### 5.1 Clear Structure
 
-The development process has clearly defined stages and activities.
+រាល់ Phase មានការងារច្បាស់លាស់ ដូច្នេះ Team ងាយដឹងថាត្រូវធ្វើអ្វីមុន និងអ្វីក្រោយ។
 
 ### 5.2 Clear Requirements
 
-Requirements are defined before implementation and can be reviewed before development continues.
+Requirements ត្រូវបានកំណត់មុន Coding ហើយអាច Review មុនចូល Phase បន្ទាប់។
 
 ### 5.3 Good Documentation
 
-Each stage can produce documents and deliverables that can be reviewed and traced.
+រាល់ Phase មាន Documents និង Deliverables ដែលអាច Review និង Trace បាន។
 
 ### 5.4 Systematic Testing
 
-Testing is planned as part of the development process and can be linked to requirements.
+Testing ត្រូវបាន Plan ជាមុន ហើយអាច Link ជាមួយ Requirements។
 
 ### 5.5 Easy to Manage
 
-The clear sequence makes project planning, progress tracking, and responsibility assignment easier.
+Process ដែលមានលំដាប់ច្បាស់ ធ្វើឱ្យ Project Planning និង Progress Tracking ងាយស្រួល។
+
+---
 
 ## 6. Limitations
 
-The Waterfall Model also has some limitations.
+### 6.1 Difficult to Change Requirements
 
-### 6.1 Difficult to Handle Changes
-
-Changing requirements after development has started can be difficult.
+បើ Requirements ផ្លាស់ប្តូរនៅពេល Development បានចាប់ផ្តើម វាអាចធ្វើឱ្យត្រូវកែ Design, Code និង Tests ម្តងទៀត។
 
 Example:
 
 ```text
 Original Requirement
 Maximum Dose = 10 units
-        ↓
+        |
 Design
-        ↓
+        |
 Implementation
-        ↓
+        |
 New Requirement
 Maximum Dose = 8 units
 ```
 
-The change may require updates to the requirements, design, software, and tests.
-This can cause rework and increase development effort.
+ការផ្លាស់ប្តូរបែបនេះអាចបង្កើត **Rework** និងចំណាយពេលបន្ថែម។
+
 ### 6.2 Feedback Can Come Late
 
-Users may not see the complete system until later in the development process.
-This can make it harder to discover some problems early.
+User អាចមិនឃើញ Complete System រហូតដល់ចុង Development។ ដូច្នេះ Problem ខ្លះអាចរកឃើញយឺត។
 
-### 6.3 Testing Changes Can Be Expensive
+### 6.3 Late Changes Can Be Expensive
 
-If a requirement changes late, related design, implementation, and test cases may also need to be updated.
+បើ Requirement ផ្លាស់ប្តូរយឺត អាចត្រូវ Update Design, Code និង Test Cases ជាច្រើន។
+
+---
 
 ## 7. Waterfall and V-Model
 
-The V-Model is closely related to the Waterfall approach.
-Both use a planned and structured development process.
+**V-Model** មានគំនិតស្រដៀង Waterfall ព្រោះទាំងពីរមាន Planned និង Structured Process។
 
-Waterfall mainly shows the sequence of development stages.
-The V-Model shows the relationship between development activities and testing activities.
+- **Waterfall** ផ្តោតលើ Development Steps តាមលំដាប់។
+- **V-Model** ផ្តោតលើ Development និង Testing ដែលភ្ជាប់គ្នា។
 
 Example:
 
 ```text
-Requirements Specification  ↔  Acceptance Testing
-System Specification       ↔  System Testing
-Architecture Design        ↔  Integration Testing
-Detailed Design            ↔  Unit Testing
+Requirements Specification  <->  Acceptance Testing
+System Specification       <->  System Testing
+Architecture Design        <->  Integration Testing
+Detailed Design            <->  Unit Testing
              \              /
               Implementation
 ```
 
-Therefore:
+សម្រាប់ Insulin Pump, V-Model អាចជួយបន្ថែម **Testing និង Traceability** ទៅក្នុង Waterfall Process។
 
-- **Waterfall** → organizes the development process in stages.
-- **V-Model** → connects development stages with verification and validation activities.
+---
 
-In this case study, the V-Model can strengthen the Waterfall approach by providing
-clear testing and traceability for the safety-critical insulin pump system.
 ## 8. Waterfall Phase Summary
 
 | Phase | Main Activity | Main Deliverable |
 |---|---|---|
-| Requirements | Define system and safety needs | URD / SRS |
-| Design | Design architecture and software modules | Design Documents |
-| Implementation | Develop software components | Source Code |
-| Testing | Verify the complete system | Test Cases / Test Report |
-| Operation & Maintenance | Operate, fix, and update the system | Maintenance Records |
+| Requirements | កំណត់ System និង Safety Needs | URD / SRS |
+| Design | រៀបចំ Architecture និង Software Modules | Design Documents |
+| Implementation | សរសេរ និង Develop Code | Source Code |
+| Testing | Test និង Verify System | Test Cases / Test Report |
+| Operation & Maintenance | Run, Fix និង Update System | Maintenance Records |
+
+---
 
 ## 9. Summary
 
-The Waterfall Model is a plan-driven software process model.
-It provides a clear sequence of development stages:
+**Waterfall Model** គឺជា Process Model ដែលមានលំដាប់ច្បាស់៖
 
 ```text
 Requirements
-     ↓
+     |
 Design
-     ↓
+     |
 Implementation
-     ↓
+     |
 Testing
-     ↓
+     |
 Operation & Maintenance
 ```
 
-For the Insulin Pump case study, the model helps organize requirements,
-design, implementation, testing, documentation, and maintenance.
-Because the insulin pump is a safety-critical medical system, the development
-process must also include strong verification, validation, safety checks,
-risk management, and requirements traceability.
+សម្រាប់ **Insulin Pump Case Study**, Waterfall ជួយ Team រៀបចំ Requirements, Design, Coding, Testing និង Documentation ឱ្យមាន Order ច្បាស់។
 
-The V-Model complements the Waterfall approach by connecting development stages
-with their related testing activities.
+ដោយសារ Insulin Pump ជា **Safety-critical Medical System**, Team ត្រូវយកចិត្តទុកដាក់លើ Safety, Verification, Validation, Risk Management និង Requirements Traceability។
+
+**V-Model** អាចប្រើជាមួយ Waterfall ដើម្បីធ្វើឱ្យ Testing និង Traceability កាន់តែច្បាស់។
 
 ## 10. References
 
 - Sommerville, I. *Software Engineering*, 10th Edition.
 - Software Process Models and Activities, Chapter 2.
-- Insulin Pump Case Study – Safety and Software Requirements.
+- Insulin Pump Case Study - Safety and Software Requirements.
